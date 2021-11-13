@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>    <!-- Required meta tags always come first -->    
+    <meta charset="utf-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">   
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Bellybutton Biodiversity</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/css/theme.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=GillSans">
+  </head> <!--
+--><body>
+  <!-- Top Container Section -->
+    <section class="align-items-center" id="top-container">
+    <div class="container-fluid toggles d-flex flex-column">
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-xl-10 col-lg-10 container-alt mx-auto m10 py-5">
+          <div class="row py-2">
+            <div class="py-2 text-center">
+              <h1 class="display-3 mb-0">
+                <span data-ng-bind="selected.pallete.name" class="ng-binding">Belly Button Biodiveristy</span>
+              </h1>
+              <hr/>
+              <p class="lead mb-3"><span data-ng-bind="selected.palette.desc" class="ng-binding">Not everyone washes their belly button when they bathe.</span>
+                Belly buttons can be gross!</p>
+              <p class="lead mb-3">Scientists have determined that all sorts of microorganisms live in the circle on your stomach</p>
+              <p class="lead mb-3">Below we have test subjects data on the microrganisms living in their belly button.  Please select a Test Subject ID.</p>
+              <hr/>
+              <form>
+                <fieldset class="form-group">
+                  <label>Test ID Number:</label>
+                      <select
+                        class="form-control"
+                        id="selDataset"
+                        onchange="optionChanged(this.value)">
+                      </select>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+      <br>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="panel panel-default">
+            <div class="panel-heading panel-heading-custom">
+              <h3 class="panel-title text-center text-light" id="table-title">
+                Demographic Info
+              </h3>
+            </div>
+            <div id="sample-metadata" class="panel-body"></div>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+          <div id="bar"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="gauge" class="chart"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="bubble"></div>
+        </div>
+      </div>
+    </div>
+    <p id="demo"></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./static/js/homepage.js"></script>
+    <script src=" ./static/js/app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7"crossorigin="anonymous"></script>
+  </body>
+</html>
