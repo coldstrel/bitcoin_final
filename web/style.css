@@ -1,0 +1,32 @@
+.jumbotron {
+    background-image: url("bacteria.jpg");
+    background-size: cover;
+    color: #fff;
+}
+
+body {
+    background-color: rgb(33, 203, 255);
+}
+
+.well{
+    border-radius: 12px;
+}
+.form-select-lg, .panel{
+    border-radius: 20px;
+}
+.panel-heading {
+    border-radius: 20px;
+}
+
+p{
+    font-family: Monaco, "Helvetica Neue"; 
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+#explanation{
+    font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+    font-size: 20px;
+    font-weight: bold;
+}
