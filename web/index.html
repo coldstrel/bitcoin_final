@@ -16,40 +16,41 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
-        <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+        <h1>Machine Learning Bitcoin Buy/Keep/Sell recommendation bot</h1>
+        <p> This interactive tool will analyze daily Bitcoin prices by 30-minute intervals from the last year, to provide a recommendation to either Buy, Keep or Sell your Bitcoin </p>
       </div>
-      <p id="explanation">We are going to show information about a selected subject depending on the ID we choose so the information can be retrieved, and also we can see the demographic of the subjects.</p>
+      <p id="explanation">We are going to show you key financial indicators for Bitcoin from the last year, and provide you with a recommendation on how to act on them.</p>
+      <p id="explanation">You just need to click: RUN</p>
     </div>
     <div class="row">
       <div class="col-md-2">
         <div class="well">
-          <h5>Test Subject ID No.:</h5>
+          <h5>START ANALYSYS:</h5>
           <!-- <select id="selDataset"></select> -->
           <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="selDataset" onchange="optionChanged(this.value)"></select>
 
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
+            <h3 class="panel-title">Financial Indicators</h3>
           </div>
           <div id="sample-metadata" class="panel-body"></div>
         </div>
       </div>
       <div class="col-md-5">
         <div id="bar"></div>
-        <p>This Bar Chart show us the top 10 of bacterias found depending on the test subject that we choose.</p>
+        <p>Graph 1</p>
       </div>
       <div class="col-md-5">
         <div id="gauge"></div>
-        <p> We can see how many scrubs per week were made with this subject using a Gauge chart</p>
+        <p> Graph 2</p>
       </div>
     </div>
     <br>
     <div class="row">
       <div class="col-md-12">
         <div id="bubble"></div>
-        <p>Here are shwon the number of acteria cultures per sample using a bubble chart</p>
+        <p>Graph 3</p>
       </div>
     </div>
   </div>
