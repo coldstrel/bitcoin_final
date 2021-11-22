@@ -20,9 +20,11 @@ Each modification of the database, python file, index file, etc. are uploaded to
 
 The project is developed in 5 stages:
 
-![img](https://github.com/coldstrel/bitcoin_final/blob/Carmen/Resources/Outline_of_the_project.PNG)
+![img](https://github.com/coldstrel/bitcoin_final/blob/Carmen/Resources/Outline_of_the_project_V1.PNG)
 
 We are currently developing the data visualization and and testing the alert prediction and confirmation model.
+
+The complete presentation is available at: : <a href="https://docs.google.com/presentation/d/157K0zkvYJeCbP-PyAiyx2wJzwxDcS8tjZdYnoqtLVmQ/edit?usp=drivesdk">------> Outline of the project</a>
 
 ## Machine Learning Model
 
