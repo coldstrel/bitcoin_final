@@ -20,17 +20,21 @@ Each modification of the database, python file, index file, etc. are uploaded to
 
 The project is developed in 5 stages:
 
-![img](https://github.com/coldstrel/bitcoin_final/blob/Carmen/Resources/Outline_of_the_project.PNG)
+![img](https://github.com/coldstrel/bitcoin_final/blob/Carmen/Resources/Outline_of_the_project_V1.PNG)
 
-We are currently developing the data visualization and testing of the Machine Learning model.
+We are currently developing the data visualization and and testing the alert prediction and confirmation model.
+
+The complete presentation is available at: : <a href="https://docs.google.com/presentation/d/157K0zkvYJeCbP-PyAiyx2wJzwxDcS8tjZdYnoqtLVmQ/edit?usp=drivesdk">------> Outline of the project</a>
 
 ## Machine Learning Model
 
 1. Description of preliminary data preprocessing.
 
-The data was extracted to a CSV file from the data source (this form of data extraction will be changed to export the data using the Refinitiv Eikon API).
+For code testing and model testing, the change was made to obtain real-time data directly from the Binance API.
 
-For our analysis it was decided to work with a price year with a 1-hour snap.
+For our analysis we have decided to work with 6 months of historical prices with a 30-minute snap.
+
+![img](https://github.com/coldstrel/bitcoin_final/blob/Carmen/Resources/Database.PNG)
 
 Subsequently, the pandas library was used to load and analyze the data.
 
@@ -45,6 +49,8 @@ The steps to follow for the preliminary processing of the data were:
 - Perform a detailed analysis of the data (count, mean, std, min, 25%, 50%, 75% and max).
 - Using the Pyplot library, BTC prices are plotted graphically.
 
+![img](https://github.com/coldstrel/bitcoin_final/blob/Carmen/Resources/Price%20history.PNG)
+
 2. Description of preliminary feature engineering and preliminary feature selection, including their decision-making process.
 
 Supervised learning techniques were applied in order to make predictions on BTC cryptocurrency prices.
@@ -54,15 +60,17 @@ For our analysis it was decided to work with two Machine Learning models and dec
 In the case of linear regression, the aim was to "draw a line" which will indicate the trend of the data set, that is, to automatically obtain the line we are looking for with the prediction trend.
 In the case of random forests, the aim is to define a prediction model based on decision trees, which reflect the way in which the problems can be broken down and the sequence of the decision process.
 
-The model will be evaluated by validating the Root-mean-square deviation (RMSE), Mean absolute error (MAE), Mean absolute percentage error (MAPE) and the coefficient of determination (R2).
-
 3. Description of how data was split into training and testing sets.
 
-To test the effectiveness of the model, a training set and a test set were created, 80% of the oldest data were used as training data and the remaining 20 as test data.
+To test the effectiveness of the model, a training set and a test set were created, 85% of the oldest data were used as training data and the remaining 15 as test data.
 
 4. Explanation of model choice, including limitations and benefits.
 
-Models are being trained in the choice of the correct model.
+It was decided to work with the linear regression model. The reason for choosing this model was that the purpose of the project is to launch a buy or sell alert based on the behavior of the future price with a window of 8 hrs and we identified that in the short term the prices adjust perfectly to a straight line, achieving an adjustment of 84%.
+
+![img](https://github.com/coldstrel/bitcoin_final/blob/Carmen/Resources/r2.PNG)
+
+![img](https://github.com/coldstrel/bitcoin_final/blob/Carmen/Resources/Linear%20regression.PNG)
 
 Advantages and disadvantages:
 
@@ -72,8 +80,21 @@ Among the advantages we can mention that the model is the simplest version of pr
 
 The behavior of prices does not fit perfectly to a line, so the confidence in the predictions can be low.
 
-### Random Forest
+5. Description of how they have trained the model thus far, and any additional training that will take place
 
-Among the advantages we could mention that it produces good prediction results quickly, a large number of input variables can be used, overfitting is avoided if there are enough trees in the model and it facilitates an estimation of the most important values in the classification.
+The model is being updated every 8 hrs, to confirm if our buy or sell alert signal was fulfilled.
 
-The main disadvantages are that it may require a long training time and the use of large amounts of information may slow down the model for prediction purposes.
+How do we perform this validation?
+
+1. We update our database.
+2. From this data we obtain the future prices at 30 minute intervals for the next 8 hrs.
+3. With the future data we run the MACD and Bollinger Band indicators to confirm if there will be a change in the trend and the strength of the trend, which triggers a buy or sell alert 8 hrs before the price change.
+
+![img](https://github.com/coldstrel/bitcoin_final/blob/Carmen/Resources/MACD.PNG)
+
+![img](https://github.com/coldstrel/bitcoin_final/blob/Carmen/Resources/bb.PNG)
+
+4. After 8 hours we obtain the actual prices of our prediction and confirm how well our prices matched reality.
+5. With the new update we also get the new future prices to continue testing the model.
+
+![img](https://github.com/coldstrel/bitcoin_final/blob/Carmen/Resources/predicted_prices.PNG)
