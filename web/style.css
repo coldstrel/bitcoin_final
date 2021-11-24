@@ -1,28 +1,44 @@
 .jumbotron {
-    background-image: url("bacteria.jpg");
+    background-image: url("resources/bitcoin.jpg");
     background-size: cover;
-    color: #fff;
+    color: rgb(252, 252, 252);
 }
 
 body {
     background-color: rgb(33, 203, 255);
 }
 
-.well{
+.col-lg-12, .col-md-6{
     border-radius: 12px;
+    border-style: bold;
+    border-style: solid;
+    padding:50px;
 }
 .form-select-lg, .panel{
     border-radius: 20px;
+    padding: 20px;
+}
+
+.closing_price{
+    padding:50px;
 }
 .panel-heading {
     border-radius: 20px;
 }
 
+h1{
+    font-weight: bold;
+}
+
+.explanation_titles{
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
 p{
     font-family: Monaco, "Helvetica Neue"; 
     font-size: 20px;
-    font-weight: bold;
-
 }
 
 #explanation{
