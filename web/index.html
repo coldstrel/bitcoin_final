@@ -5,11 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<<<<<<< HEAD
-  <title>Bellybutton Biodiversity</title>
-=======
-  <title>Bitcoin Buy / Sell / Keep reccomendation bot </title>
->>>>>>> main
+  <title>BITCOIN TRADING BOT</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css" type="text/css">
@@ -20,72 +16,77 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
-<<<<<<< HEAD
-        <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+        <h1>Bitcoin Buy/Sell/Keep </h1>
       </div>
-      <p id="explanation">We are going to show information about a selected subject depending on the ID we choose so the information can be retrieved, and also we can see the demographic of the subjects.</p>
-=======
         <h1>Machine Learning Bitcoin Buy/Keep/Sell recommendation bot</h1>
-        <p> This interactive tool will analyze daily Bitcoin prices by 30-minute intervals from the last year, to provide a recommendation to either Buy, Keep or Sell your Bitcoin </p>
+        <p> This tool will leverage Machine Learning to analyze daily Bitcoin prices in 30-minute intervals from the last year, and leveraging 3 Key Financial Indicators, will provide a recommendation to either Buy, Keep or Sell your Bitcoin </p>
       </div>
-      <p id="explanation">We are going to show you key financial indicators for Bitcoin from the last year, and provide you with a recommendation on how to act on them.</p>
-      <p id="explanation">You just need to click: RUN</p>
->>>>>>> main
-    </div>
-    <div class="row">
-      <div class="col-md-2">
-        <div class="well">
-<<<<<<< HEAD
-          <h5>Test Subject ID No.:</h5>
-          <!-- <select id="selDataset"></select> -->
-          <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="selDataset" onchange="optionChanged(this.value)"></select>
-=======
-          <h5>START ANALYSYS:</h5>
-         <button type="button" onclick="alert('You pressed the button!')">RUN</button>
->>>>>>> main
-
-        </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-<<<<<<< HEAD
-            <h3 class="panel-title">Demographic Info</h3>
-=======
-            <h3 class="panel-title">Financial Indicators</h3>
->>>>>>> main
-          </div>
-          <div id="sample-metadata" class="panel-body"></div>
-        </div>
-      </div>
-      <div class="col-md-5">
-        <div id="bar"></div>
-<<<<<<< HEAD
-        <p>This Bar Chart show us the top 10 of bacterias found depending on the test subject that we choose.</p>
-      </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
-        <p> We can see how many scrubs per week were made with this subject using a Gauge chart</p>
-=======
-        <p>Graph 1</p>
-      </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
-        <p> Graph 2</p>
->>>>>>> main
-      </div>
-    </div>
     <br>
     <div class="row">
-      <div class="col-md-12">
-        <div id="bubble"></div>
-<<<<<<< HEAD
-        <p>Here are shwon the number of acteria cultures per sample using a bubble chart</p>
-=======
-        <p>Graph 3</p>
->>>>>>> main
-      </div>
     </div>
   </div>
+  <div class="col-lg-12" id="info_historica" style="text-align: center;">
+    <p class="explanation_titles"><b> Key Financial Indicator #1</b></p>
+    <p class="explanation_titles"><b> Bitcoin Price trend for the last 6 months</b></p>
+      <br>
+      <div id="closing_price" style= "text-align: center;">
+        <div> <embed type="text/html" src="resources/prices.html" width="900" height="600"> </div>
+      </div>  
+      <p>This graph shows us the Bitcoin price for the last 6 months.</p>
+      <p>It's interactive: You can zoom in to view data points, with a maximum detail of 30 minute intervals. </p>
+  </div>
+
+  <div class="col-12">
+    <div class="col-md-6" id="MACD"style="text-align: center;">
+      <p class="explanation_titles">Key Financial Indicator #2: MACD Analysis</p>
+      <p class="explanation_titles">(Moving Average Convergence/Divergence) </p>
+      <div id="graph_MACD"style= "text-align: center;"></div>>
+        <div><embed type="text/html" src="resources/MACD.html" width="800" height="600"> </div>
+          <p>This analysis was selected to indicate changes in the strength, direction, momentum, and duration of Bitcoin's stock's price</p>
+          <p>The crossover of the MACD & SIGNAL lines provide trading signals similar to a two moving average system.</p>
+          <p>When the MACD line crosses from below to above the signal line, the indicator is considered bullish. The further below the zero line the stronger the signal.</p>
+          <p>When the MACD line crosses from above to below the signal line, the indicator is considered bearish. The further above the zero line the stronger the signal.</p>
+          <p>This graph is also interactive: You can zoom in to view data points, with a maximum detail of 30 minute intervals. </p>
+        </div>
+    </div>
+  
+    <div class="col-md-6" id="bollinger"style="text-align: center;">
+      <p class="explanation_titles">Key Financial Indicator #3:</p>
+      <p class="explanation_titles">Bollinger Bands </p>
+      <div class="graph_bollinger"style= "text-align: center;"></div>>
+        <div><embed type="text/html" src="resources/BBands.html" width="800" height="600"> </div>
+          <p>This analysis was selected to provide a higher probability of properly identifying when an asset is oversold or overbought.</p>
+          <p>This analysis is defined by a set of trendlines plotted two standard deviations (positively and negatively) away from a simple moving average (SMA) of Bitcoins price.</p>
+          <p>The central concept of Bollinger Bands is known as "The Squeeze": When the bands come close together, constricting the moving average. </p>
+          <p>This signals a period of low volatility and is considered a potential sign of trading opportunities.</p>
+          <p>This graph is also interactive: You can zoom in to view data points, with a maximum detail of 30 minute intervals. </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col-lg-12" id="Recommendation"style="text-align: center;">
+    <p class="explanation_titles">BOT Accuracy</p>
+    <p>This table shows the results from the last 8 hours.</p>
+    <br>
+    <img src="recomendation_df2.png" alt="Model Validation" width="1237" height="509">
+    <br>
+    <p>We can see the following:</p></p>
+    <p>Machine Learning accurately predicted the Buy / Sell signals</p>
+    <p>However, the precise time for action & the price accuracy can still be improved</p>
+  
+        </div>
+  </div>
+</div>
+
+
+  <div class="col-lg-12" id="Recommendation"style="text-align: center;">
+    <p class="explanation_titles">Given the latest data, and the results from the 3 indicators, our current projection is:</p>
+    <br>
+    <img src="last_reco.png" alt="Current projection" width="327" height="509">
+    <br>
+  </div>
+  </div>
+</div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -94,8 +95,5 @@
 
 </body>
 
-<<<<<<< HEAD
 </html>
-=======
 </html>
->>>>>>> main
