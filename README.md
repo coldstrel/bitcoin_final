@@ -122,7 +122,7 @@ As can be seen in the table above, the predicted prices are very close to those 
 
 Now if we compare against the current indicators we find that the predicted signals were obtained.
 
-![img](https://github.com/coldstrel/bitcoin_final/blob/Carmen/Resources/results_1.PNG)
+![img](https://github.com/coldstrel/bitcoin_final/blob/Carmen/Resources/results_2.PNG)
 
 For a quick analysis of the results, a dashboard with interactive graphics was created using plotly and the dashboard was assembled in an HTML file.
 
